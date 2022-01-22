@@ -1,0 +1,42 @@
+name: "macos-universal-binary-action"
+description: 'Action to create and upload macOS Universal binaries from Github releases'
+inputs:
+  owner:
+    description: "Owner of the Github repository"
+    required: true
+  repository:
+    description: "Github repository name"
+    required: true
+  tag:
+    description: "Github release tag for asset download/upload"
+    required: false
+    default: "latest"
+  amd64:
+    description: "Substring to filter the amd64 binary"
+    required: true
+  arm64:
+    description: "Substring to filter the amd64 binary"
+    required: true
+  compressed:
+    description: "Specify whether Github assets are compressed"
+    required: false
+    default: "true"
+  binary-path:
+    description: "Specify path to the binary in the compressed archive"
+    required: false
+  overwrite:
+    description: "Overwrite if a binary of the same name already exists"
+    required: false
+    default: "false"
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.owner }}
+    - ${{ inputs.repository }}
+    - ${{ inputs.tag }}
+    - ${{ inputs.amd64 }}
+    - ${{ inputs.arm64 }}
+    - ${{ inputs.compressed }}
+    - ${{ inputs.overwrite }}
+    - ${{ inputs.binary-path }}
