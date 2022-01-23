@@ -1,5 +1,8 @@
 name: "macos-universal-binary-action"
 description: 'Action to create and upload macOS Universal binaries from Github releases'
+branding:
+  icon: "box"
+  color: "purple"
 inputs:
   owner:
     description: "Owner of the Github repository"

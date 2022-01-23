@@ -25,6 +25,6 @@ if [ "$OVERWRITE" == "true" ]; then
     options+=("--overwrite")
 fi
 
-command="./amalgam ${options[*]}"
+command="/amalgam ${options[*]}"
 echo "Running: $command"
 eval "$command"
