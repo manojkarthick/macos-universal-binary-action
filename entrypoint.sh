@@ -7,9 +7,10 @@ AMD64="$4"
 ARM64="$5"
 COMPRESSED="$6"
 OVERWRITE="$7"
-BINARY_PATH="$8"
+UNIVERSAL_IDENTIFIER="$8"
+BINARY_PATH="$9"
 
-options=("--owner" "$OWNER" "--repo" "$REPOSITORY" "--tag" "$TAG" "--amd64" "$AMD64" "--arm64" "$ARM64")
+options=("--owner" "$OWNER" "--repo" "$REPOSITORY" "--tag" "$TAG" "--amd64" "$AMD64" "--arm64" "$ARM64" "--identifier" "$UNIVERSAL_IDENTIFIER")
 
 if [ -n "$BINARY_PATH" ]; then
     options+=("--binary-path")

@@ -28,6 +28,10 @@ inputs:
     description: "Overwrite if a binary of the same name already exists"
     required: false
     default: "false"
+  universal-identifier:
+    description: "Identifier string for the Github asset containing the universal binary"
+    required: false
+    default: "all"
 runs:
   using: 'docker'
   image: 'Dockerfile'
@@ -39,4 +43,5 @@ runs:
     - ${{ inputs.arm64 }}
     - ${{ inputs.compressed }}
     - ${{ inputs.overwrite }}
+    - ${{ inputs.universal-identifier }}
     - ${{ inputs.binary-path }}

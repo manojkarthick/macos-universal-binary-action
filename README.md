@@ -17,6 +17,8 @@ Github Action to create and upload macOS universal binaries
 
 ```yaml
 uses: "manojkarthick/macos-universal-binary-action@alpha"
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 with:
   owner: "manojkarthick"
   repo: "amalgam"
