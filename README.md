@@ -28,4 +28,5 @@ with:
   compressed: "true"
   binary-path: "amalgam"
   overwrite: "true"
+  universal-identifier: "all"
 ```
