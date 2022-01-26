@@ -16,7 +16,7 @@ Github Action to create and upload macOS universal binaries
 ## Example usage
 
 ```yaml
-uses: "manojkarthick/macos-universal-binary-action@beta"
+uses: "manojkarthick/macos-universal-binary-action@v0"
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 with:

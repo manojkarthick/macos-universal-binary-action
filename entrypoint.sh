@@ -9,6 +9,7 @@ COMPRESSED="$6"
 OVERWRITE="$7"
 UNIVERSAL_IDENTIFIER="$8"
 BINARY_PATH="$9"
+FOLDER_WRAPPED="${10}"
 
 options=("--owner" "$OWNER" "--repo" "$REPOSITORY" "--tag" "$TAG" "--amd64" "$AMD64" "--arm64" "$ARM64" "--identifier" "$UNIVERSAL_IDENTIFIER")
 
@@ -23,6 +24,10 @@ fi
 
 if [ "$OVERWRITE" == "true" ]; then
     options+=("--overwrite")
+fi
+
+if [ "$FOLDER_WRAPPED" == "true" ]; then
+    options+=("--folder-wrapped")
 fi
 
 command="/amalgam ${options[*]}"

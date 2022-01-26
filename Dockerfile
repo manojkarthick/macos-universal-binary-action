@@ -1,4 +1,4 @@
-FROM manojkarthick/amalgam:v0.1.2
+FROM manojkarthick/amalgam:v0.1.3
 
 COPY entrypoint.sh /entrypoint.sh
 
