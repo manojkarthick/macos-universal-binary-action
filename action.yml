@@ -24,13 +24,6 @@ inputs:
     description: "Specify whether Github assets are compressed"
     required: false
     default: "true"
-  folder-wrapped:
-    description: "Specify if files are wrapped inside a folder with name of the archive"
-    required: false
-    default: "false"
-  binary-path:
-    description: "Specify path to the binary in the compressed archive"
-    required: false
   overwrite:
     description: "Overwrite if a binary of the same name already exists"
     required: false

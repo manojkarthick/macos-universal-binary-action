@@ -26,7 +26,6 @@ with:
   amd64: "darwin-amd64"
   arm64: "darwin-arm64"
   compressed: "true"
-  binary-path: "amalgam"
   overwrite: "true"
   universal-identifier: "all"
 ```
