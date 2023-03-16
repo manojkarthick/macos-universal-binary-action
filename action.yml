@@ -18,7 +18,7 @@ inputs:
     description: "Substring to filter the amd64 binary"
     required: true
   arm64:
-    description: "Substring to filter the amd64 binary"
+    description: "Substring to filter the arm64 binary"
     required: true
   compressed:
     description: "Specify whether Github assets are compressed"
