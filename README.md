@@ -1,5 +1,26 @@
 # macos-universal-binary-action
 
+> [!WARNING]
+> **This action is deprecated and the repository is archived.** It is no longer maintained.
+> Existing workflows that pin a version will keep working, but known bugs will not be fixed
+> (for example, `binary-path` and `folder-wrapped` are ignored).
+>
+> Create universal binaries as part of your build instead:
+>
+> * **Go:** use GoReleaser's built-in [`universal_binaries`](https://goreleaser.com/customization/builds/universalbinaries/) with [`goreleaser/goreleaser-action`](https://github.com/goreleaser/goreleaser-action). It runs on Linux runners.
+>   ```yaml
+>   # .goreleaser.yaml
+>   universal_binaries:
+>     - replace: true
+>   ```
+> * **On a macOS runner (any language):** `lipo` ships with Xcode.
+>   ```sh
+>   lipo -create -output myapp myapp-arm64 myapp-amd64
+>   ```
+> * **On a Linux runner (any language):** use [konoui/lipo](https://github.com/konoui/lipo), a `lipo`-compatible tool written in Go, or `llvm-lipo`.
+>
+> Sign and notarize the merged binary after you create it.
+
 Github Action to create and upload macOS universal binaries
 
 ## Inputs
